@@ -36,13 +36,6 @@ function startLevel(map) {
 
     map.placePlayer(7, 5);
 
-    map.defineObject('logo', {
-        'symbol': '█',
-        'color': '#c00',
-        'onCollision': function (player) {
-            player.killedBy('the vodafone logo');
-        }
-    });    
 #BEGIN_EDITABLE#
 
     for (var y = 3; y <= map.getHeight() - 10; y++) {
@@ -57,20 +50,26 @@ function startLevel(map) {
 
 #END_EDITABLE#
 
-var vf = [
-    "# #  ###  ##    #   ###  ###  ###  ###  #",
-    "# #  # #  # #  # #  #    # #  # #  #    #",
-    "# #  # #  # #  ###  ##   # #  # #  ##   #",
-    "# #  # #  # #  # #  #    # #  # #  #",
-    " #   ###  ##   # #  #    ###  # #  ###"];
+    map.defineObject('logo', {
+        'symbol': '█',
+        'color': '#c00',
+        'onCollision': function (player) {
+            player.killedBy('the vodafone logo');
+        }
+    });    
+    var vf = [
+        "# #  ###  ##    #   ###  ###  ###  ###  #",
+        "# #  # #  # #  # #  #    # #  # #  #    #",
+        "# #  # #  # #  ###  ##   # #  # #  ##   #",
+        "# #  # #  # #  # #  #    # #  # #  #",
+        " #   ###  ##   # #  #    ###  # #  ###"];
     for (var x = 0; x <= 40; x++) {
         for (var y = 0; y <= 4; y++) {
             if (vf[y][x] === '#') {
                 map.placeObject(5 + x, 7 + y, 'logo');
             }
         }
-    }
-    
+    }    
 
     map.placeObject(45, 11, 'computer');
 
