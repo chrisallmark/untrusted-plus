@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
-    "build": "next build",
+    "build": "next build && yarn untrusted",
     "start": "next start",
     "lint": "next lint",
     "untrusted": "cd untrusted && make release && mkdir -p ../../public/untrusted && cp -r ./{index.html,images,lib,music,scripts,sound,styles} ../../public/untrusted"
