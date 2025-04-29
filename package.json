@@ -7,7 +7,7 @@
     "build": "yarn untrusted && next build",
     "start": "next start",
     "lint": "next lint",
-    "untrusted": "cd untrusted && make release && mkdir -p ../public/untrusted && cp -r ./{index.html,images,lib,music,scripts,sound,styles} ../../public/untrusted"
+    "untrusted": "cd untrusted && make release && mkdir -p ../public/untrusted && cp -r ./{index.html,images,lib,music,scripts,sound,styles} ../public/untrusted"
   },
   "dependencies": {
     "react": "^19.0.0",
