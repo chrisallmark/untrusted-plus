@@ -47,6 +47,7 @@
 function startLevel(map) {
 #START_OF_START_LEVEL#
     var credits = [
+        [16, 0, "V O D A F O N E"],
         [15, 1, "U N T R U S T E D"],
         [20, 2, "- or -"],
         [5, 3, "THE CONTINUING ADVENTURES OF DR. EVAL"],

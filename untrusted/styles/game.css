@@ -13,7 +13,6 @@ body {
 }
 
 #container {
-  background-image: url("/untrusted/images/vf.gif");
   background-position: center center;
   background-size: cover;
   display: table-cell;
