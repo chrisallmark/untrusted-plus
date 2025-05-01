@@ -12,11 +12,31 @@ body {
   margin: 0;
 }
 
-#container {
+#bg {
   background-position: center center;
   background-size: cover;
-  display: table-cell;
+  height: 100%;
+}
+
+#container {
+  background-image: url("/untrusted/images/scanlines.png");
+  background-position: center center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  position: absolute;
   vertical-align: middle;
+  width: 100%;
+}
+
+#heading {
+  font-family: "Share Tech Mono", monospace;
+  font-size: 64px;
+  font-weight: bold;
+  margin-bottom: 0;
+  text-align: center;
 }
 
 #panes {
