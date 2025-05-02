@@ -47,12 +47,12 @@
 function startLevel(map) {
 #START_OF_START_LEVEL#
     var credits = [
-        [16, 0, "V O D A F O N E"],
-        [15, 1, "U N T R U S T E D"],
-        [20, 2, "- or -"],
-        [5, 3, "THE CONTINUING ADVENTURES OF DR. EVAL"],
-        [1, 4, "{"],
-        [2, 5, "a_game_by: 'Alex Nisnevich and Greg Shuflin',"],
+        [16, 1, "V O D A F O N E"],
+        [15, 2, "U N T R U S T E D"],
+        [20, 3, "- or -"],
+        [5, 4, "THE CONTINUING ADVENTURES OF DR. EVAL"],
+        [1, 5, "{"],
+        [2, 6, "a_game_by: 'Alex Nisnevich and Greg Shuflin',"],
         [2, 7, "special_thanks_to: {"],
         [5, 8, "Dmitry_Mazin: ['design', 'code'],"],
         [5, 9, "Jordan_Arnesen: ['levels', 'playtesting'],"],
