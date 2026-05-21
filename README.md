@@ -1,6 +1,6 @@
 # Untrusted+
 
-An 8-bit spin on Untrusted - a Javascript puzzle game where players edit code within the game itself to solve levels.
+An 8-bit spin on Untrusted - a JavaScript puzzle game where players edit code within the game itself to solve levels.
 
 ## How it works
 
@@ -13,11 +13,17 @@ The repo has two layers:
 - **Next.js wrapper** (`/src/`) — serves the game; the root route redirects to the static game entry point
 - **Legacy game engine** (`/untrusted/`) — vanilla JavaScript built via Makefile, with rot.js for rendering and CodeMirror for the in-game editor
 
+## Prerequisites
+
+- **Node.js** 22+ and **pnpm** 11 (`corepack enable` or `npm i -g pnpm`)
+- **Java** (for `make release` — used by YUI Compressor during `pnpm build`)
+
 ## Development
 
 ```bash
-pnpm dev        # Start Next.js dev server
+pnpm dev        # Start Next.js dev server (turbopack)
 pnpm build      # Build game engine, then Next.js app
+pnpm start      # Start production server
 pnpm lint       # Run ESLint
 ```
 
@@ -28,6 +34,15 @@ cd untrusted
 make            # Unminified debug build
 make release    # Minified production build (requires Java)
 make runlocal   # Serve locally for testing
+```
+
+## Docker
+
+A `Dockerfile` is included for containerised deployments. It uses a multi-stage build: a `builder` stage (requires `make` + Java) produces the game assets and Next.js standalone output, and a slim `runner` stage serves it.
+
+```bash
+docker build -t untrusted-plus .
+docker run -p 3000:3000 untrusted-plus
 ```
 
 ## Commits & releases

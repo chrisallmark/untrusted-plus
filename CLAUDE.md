@@ -15,6 +15,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 # Development
 pnpm dev              # Next.js dev server (turbopack)
 pnpm lint             # ESLint
+pnpm commit           # Interactive conventional-commit prompt (commitizen)
 
 # Production
 pnpm build            # Builds untrusted game, then Next.js app
@@ -54,6 +55,8 @@ Global-scope, concatenation-based (no module system). Build order in the Makefil
 | `ui.js` | UI management |
 | `sound.js` | Audio tracks |
 | `reference.js` | Player-facing API documentation |
+| `inventory.js` | Player inventory state and item lookups |
+| `util.js` | General utility functions (clone, etc.) |
 
 ### Levels (`/untrusted/levels/`)
 
@@ -76,3 +79,5 @@ Custom level sets can be built with `make mod=example_mod`. The `default` symlin
 - **Script concatenation order is significant** — don't reorder entries in the Makefile.
 - **The `.jsx` level files are not React** — do not apply JSX/TSX tooling to them.
 - **Editable markers are a core game mechanic** — preserve `#BEGIN_EDITABLE#` / `#END_EDITABLE#` / `#{#` / `#}#` markers exactly when editing level files.
+- **Docker builder stage needs `make` + Java** — the `untrusted` script uses shell brace expansion; the `Dockerfile` inlines the build steps directly and installs `make` and `default-jre-headless` in the builder stage.
+- **Vercel deploy overrides the install command** — `vercel.json` sets `installCommand` to `pnpm install --config.dangerouslyAllowAllBuilds=true` so that native deps (`sharp`) can run their build scripts.
