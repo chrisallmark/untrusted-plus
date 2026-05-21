@@ -29,3 +29,18 @@ make            # Unminified debug build
 make release    # Minified production build (requires Java)
 make runlocal   # Serve locally for testing
 ```
+
+## Commits & releases
+
+This repo follows [Conventional Commits](https://www.conventionalcommits.org/) and uses [semantic-release](https://semantic-release.gitbook.io/) to publish versions automatically.
+
+- Run `pnpm commit` for an interactive prompt (commitizen), or write the message by hand.
+- A husky `commit-msg` hook runs commitlint and rejects non-conventional messages.
+- Pushes to `main` trigger [`.github/workflows/release.yml`](.github/workflows/release.yml), which decides the next version from the commits, updates `CHANGELOG.md` and `package.json`, tags the commit, and publishes a GitHub Release.
+
+| Commit type | Effect |
+|-------------|--------|
+| `feat: …` | Minor version bump |
+| `fix: …` | Patch version bump |
+| `…!: …` or `BREAKING CHANGE:` footer | Major version bump |
+| `chore:`, `docs:`, `ci:`, `refactor:`, `test:`, `style:` | No release |
