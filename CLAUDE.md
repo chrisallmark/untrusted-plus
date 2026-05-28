@@ -80,4 +80,4 @@ Custom level sets can be built with `make mod=example_mod`. The `default` symlin
 - **The `.jsx` level files are not React** — do not apply JSX/TSX tooling to them.
 - **Editable markers are a core game mechanic** — preserve `#BEGIN_EDITABLE#` / `#END_EDITABLE#` / `#{#` / `#}#` markers exactly when editing level files.
 - **Docker builder stage needs `make` + Java** — the `untrusted` script uses shell brace expansion; the `Dockerfile` inlines the build steps directly and installs `make` and `default-jre-headless` in the builder stage.
-- **Vercel deploy overrides the install command** — `vercel.json` sets `installCommand` to `pnpm install --config.dangerouslyAllowAllBuilds=true` so that native deps (`sharp`) can run their build scripts.
+- **Vercel deploy overrides the install command** — `vercel.json` sets `installCommand` to `pnpm install`; native deps (`sharp`, `unrs-resolver`) are permitted via `allowBuilds` in `pnpm-workspace.yaml`.
