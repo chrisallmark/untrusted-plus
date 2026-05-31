@@ -1,3 +1,9 @@
+## [1.0.2](https://github.com/chrisallmark/untrusted-plus/compare/v1.0.1...v1.0.2) (2026-05-31)
+
+### Bug Fixes
+
+* remove vercel.json ([ba24b8f](https://github.com/chrisallmark/untrusted-plus/commit/ba24b8f7262bf19cb8d3471e5e8e61d7026ff75e))
+
 ## [1.0.1](https://github.com/chrisallmark/untrusted-plus/compare/v1.0.0...v1.0.1) (2026-05-28)
 
 ### Bug Fixes
