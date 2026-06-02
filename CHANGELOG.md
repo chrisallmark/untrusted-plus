@@ -1,3 +1,9 @@
+## [1.0.3](https://github.com/chrisallmark/untrusted-plus/compare/v1.0.2...v1.0.3) (2026-06-02)
+
+### Bug Fixes
+
+* add woodpecker ([03f21ec](https://github.com/chrisallmark/untrusted-plus/commit/03f21eca658b0ba44674510609d56f166a07e38f))
+
 ## [1.0.2](https://github.com/chrisallmark/untrusted-plus/compare/v1.0.1...v1.0.2) (2026-05-31)
 
 ### Bug Fixes
