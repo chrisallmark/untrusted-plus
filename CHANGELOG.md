@@ -1,3 +1,9 @@
+## [1.0.4](https://github.com/chrisallmark/untrusted-plus/compare/v1.0.3...v1.0.4) (2026-06-05)
+
+### Bug Fixes
+
+* update favicon ([4552a60](https://github.com/chrisallmark/untrusted-plus/commit/4552a608efa4cb1f7db75d50a49b40e93d3df531))
+
 ## [1.0.3](https://github.com/chrisallmark/untrusted-plus/compare/v1.0.2...v1.0.3) (2026-06-02)
 
 ### Bug Fixes
